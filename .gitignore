@@ -1,1 +1,11 @@
 .worktrees/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+gtm.db
+state.json
+.env
+*.sqlite3

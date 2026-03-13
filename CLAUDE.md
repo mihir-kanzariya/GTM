@@ -466,9 +466,25 @@ from gtm.collectors import parse_reddit_response, parse_hn_stories, parse_devto_
 from gtm.intelligence import store_signals, create_topic, compute_trend_score, compute_opportunity_score
 
 # 1. Fetch Reddit hot posts from niche subreddits
+# IMPORTANT: Do NOT use WebSearch or WebFetch for Reddit — they don't work reliably.
+# Use curl with old.reddit.com JSON API instead:
 subreddits = get_niche_subreddits(db_path)
 for sub in subreddits:
-    # WebFetch f"https://www.reddit.com/r/{sub}/hot.json?limit=25"
+    # Bash: curl -s -H "User-Agent: OpenOwl/1.0" "https://old.reddit.com/r/{sub}/hot.json?limit=25" | python3 -c "
+    #   import json, sys
+    #   data = json.load(sys.stdin)
+    #   for i, post in enumerate(data['data']['children'], 1):
+    #       d = post['data']
+    #       title = d['title']
+    #       score = d['score']
+    #       comments = d['num_comments']
+    #       url = d.get('url', '')
+    #       selftext = (d.get('selftext', '') or '')[:100]
+    #       print(f'{i}. [{score} pts, {comments} comments] {title}')
+    #       if selftext:
+    #           print(f'   > {selftext}...')
+    #       print()
+    # "
     # signals = parse_reddit_response(response_json)
     # store_signals(db_path, signals, session_id)
 
