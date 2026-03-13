@@ -32,7 +32,7 @@ class TestDecisions(unittest.TestCase):
 
     def test_log_decision_with_context(self):
         did = log_decision(self.db_path, category="promotion",
-                           decision="Promoted blocfeed",
+                           decision="Promoted acme",
                            reasoning="Ratio at 6%, post about bug tracking",
                            context='{"action_id": 42, "ratio": 0.06}', platform="reddit")
         conn = get_connection(self.db_path)

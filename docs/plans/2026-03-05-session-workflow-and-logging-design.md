@@ -58,7 +58,7 @@ Two interconnected systems for the GTM automation: (1) a state-machine session r
 ### Action Decision Flow
 1. Roll against action-mix weights from master CLAUDE.md
 2. If "comment/reply" selected, check promotion ratio (1:10 max)
-3. If promotion eligible AND post is genuinely relevant to Blocpad/Blocfeed, include natural mention
+3. If promotion eligible AND post is genuinely relevant to products from DB, include natural mention
 4. If promotion not eligible or not relevant, write pure-value comment
 5. Apply human writing style rules from master CLAUDE.md
 6. Apply platform-specific character limits and tone
@@ -98,7 +98,7 @@ CREATE TABLE actions (
     target_url TEXT,
     target_title TEXT,
     content_written TEXT,       -- NULL for likes/saves/skips
-    promoted_product TEXT,      -- blocpad/blocfeed/NULL
+    promoted_product TEXT,      -- product URL from DB / NULL
     created_at DATETIME NOT NULL DEFAULT (datetime('now')),
     keywords_matched TEXT       -- comma-separated keywords that led to discovery
 );

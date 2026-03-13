@@ -20,13 +20,13 @@ class TestThreads(unittest.TestCase):
 
     def test_log_thread(self):
         tweets = [
-            "This week I shipped auth for Blocpad. Here's how it went (thread)",
+            "This week I shipped auth for Acme. Here's how it went (thread)",
             "First, I tried Supabase Auth. Setup took 10 minutes.",
             "Switched to custom JWT + Supabase RLS. More control.",
             "Lesson: don't pick the easy path if your users are mostly on mobile.",
         ]
         tid = log_thread(self.db_path, self.sid, "building_in_public",
-                         "Shipping auth for Blocpad", tweets, "https://x.com/mihir/status/123")
+                         "Shipping auth for Acme", tweets, "https://x.com/mihir/status/123")
         self.assertIsNotNone(tid)
         conn = get_connection(self.db_path)
         row = conn.execute("SELECT * FROM threads WHERE id = ?", (tid,)).fetchone()

@@ -210,7 +210,7 @@ class TestDbCrud(unittest.TestCase):
         sid = create_session(self.db_path, "twitter")
         log_action(self.db_path, sid, "twitter", "like", "https://x.com/post/1")
         log_action(self.db_path, sid, "twitter", "comment", "https://x.com/post/2",
-                   content="nice post", promoted_product="blocpad")
+                   content="nice post", promoted_product="acme-product")
         end_session(self.db_path, sid)
         conn = get_connection(self.db_path)
         row = conn.execute("SELECT * FROM sessions WHERE id = ?", (sid,)).fetchone()
@@ -245,7 +245,7 @@ class TestDbCrud(unittest.TestCase):
         for i in range(9):
             log_action(self.db_path, sid, "reddit", "like", f"https://reddit.com/{i}")
         log_action(self.db_path, sid, "reddit", "comment", "https://reddit.com/promo",
-                   content="check this", promoted_product="blocfeed")
+                   content="check this", promoted_product="acme-product")
         ratio = get_promotion_ratio(self.db_path, "reddit", days=7)
         self.assertAlmostEqual(ratio, 0.1, places=2)  # 1 promo / 10 total
 
@@ -756,7 +756,7 @@ class TestWeeklyReport(unittest.TestCase):
         sid = create_session(self.db_path, "reddit")
         log_action(self.db_path, sid, "reddit", "like", "https://reddit.com/1")
         log_action(self.db_path, sid, "reddit", "comment", "https://reddit.com/2",
-                   content="great post", promoted_product="blocpad")
+                   content="great post", promoted_product="acme-product")
         log_action(self.db_path, sid, "reddit", "like", "https://reddit.com/3")
         end_session(self.db_path, sid)
 

@@ -17,7 +17,7 @@ python3 -m gtm niche                         # View current niche profile
 python3 -m gtm niche set-industries ai saas developer-tools  # Set your industries
 python3 -m gtm niche set-audiences developers founders       # Set your target audiences
 python3 -m gtm niche exclude politics crypto sports          # Exclude off-topic categories
-python3 -m gtm niche add-product blocfeed.com "bug reporting"  # Add a product to promote
+python3 -m gtm niche add-product site.com "description"       # Add a product to promote
 
 # --- Goals (auto-selected each session, manual override rarely needed) ---
 python3 -m gtm goal                          # View current goals + auto-recommendation with reasoning
@@ -196,7 +196,7 @@ while not runner.is_done():
         "https://x.com/post/123",           # target URL
         target_title="Post about AI agents", # post title (optional)
         content="great point about agents",  # your comment text (optional)
-        promoted_product="blocfeed",         # if promoting (optional)
+        promoted_product="product-url",         # from DB (optional)
         keywords_matched="ai agents",        # search keyword used (optional)
         comment_url="https://x.com/reply/1", # direct URL to your comment (optional)
         author_username="dev_guru",          # post author for relationship tracking (optional)
@@ -263,12 +263,12 @@ set_niche_field(db_path, "audiences", ["developers", "founders", "indie-hackers"
 set_niche_field(db_path, "exclude", ["politics", "crypto", "sports", "gaming"])
 
 # Add products to promote
-add_product(db_path, "blocfeed.com", "in-app bug reporting with AI triage")
-add_product(db_path, "blocpad.com", "unified workspace for dev teams")
+add_product(db_path, "site.com", "short product description")
+# Products are stored in DB and used automatically during sessions
 
 # Get product list
 products = get_products(db_path)
-# Returns: [{"url": "blocfeed.com", "desc": "in-app bug reporting"}, ...]
+# Returns: [{"url": "site.com", "desc": "short product description"}, ...]
 
 # Check if a topic should be excluded
 is_excluded_topic(db_path, "Bitcoin ETF approval")   # True (matches "crypto")

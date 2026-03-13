@@ -21,8 +21,8 @@ python3 -m gtm niche                           # show current niche
 python3 -m gtm niche set-industries ai saas developer-tools productivity
 python3 -m gtm niche set-audiences developers indie-hackers founders solopreneurs
 python3 -m gtm niche exclude politics crypto celebrity sports finance gaming
-python3 -m gtm niche add-product blocpad.com "unified workspace for dev teams"
-python3 -m gtm niche add-product blocfeed.com "in-app bug reporting with AI triage"
+python3 -m gtm niche add-product site.com "description"  # products stored in DB
+python3 -m gtm niche add-product site2.com "description" # add as many as needed
 ```
 
 ### Schema
@@ -41,7 +41,7 @@ Example data:
 industries:  ["ai", "saas", "developer-tools", "productivity", "devops", "open-source"]
 audiences:   ["developers", "indie-hackers", "founders", "solopreneurs", "product-managers"]
 exclude:     ["politics", "crypto", "celebrity", "sports", "finance", "gaming", "entertainment"]
-products:    [{"url": "blocpad.com", "desc": "unified workspace"}, {"url": "blocfeed.com", "desc": "bug reporting"}]
+products:    [{"url": "site.com", "desc": "..."}, {"url": "site2.com", "desc": "..."}]  # from DB
 ```
 
 ### Where the filter applies
@@ -422,8 +422,8 @@ python3 -m gtm niche                           # show current niche profile
 python3 -m gtm niche set-industries ai saas developer-tools
 python3 -m gtm niche set-audiences developers indie-hackers founders
 python3 -m gtm niche exclude politics crypto celebrity sports
-python3 -m gtm niche add-product blocpad.com "unified workspace"
-python3 -m gtm niche add-product blocfeed.com "bug reporting"
+python3 -m gtm niche add-product site.com "description"
+python3 -m gtm niche add-product site2.com "description"
 
 # Goals
 python3 -m gtm goal                    # show current goals

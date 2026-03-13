@@ -7,7 +7,7 @@
 A folder-based automation system at `~/GTM/` that provides strategy, configuration, and behavioral rules for social media engagement across Reddit, Twitter/X, Product Hunt, and Indie Hackers. The system uses CLAUDE.md files as the configuration layer, with actual execution handled by the "owl" plugin (to be integrated later).
 
 ## Goals
-1. Increase followers and visibility for Blocpad and Blocfeed
+1. Increase followers and visibility for products configured in DB
 2. Build authentic community presence across 4 platforms
 3. Promote products naturally — only when relevant
 4. Mimic human behavior to avoid platform bans
@@ -25,8 +25,8 @@ A folder-based automation system at `~/GTM/` that provides strategy, configurati
 ```
 
 ## Products
-- **Blocpad** (blocpad.com): Unified workspace — task management + docs + collaboration
-- **Blocfeed** (blocfeed.com): Free in-app bug reporting with AI triage
+- Products are loaded from the niche_profile DB table at session start.
+- Add via: `python3 -m gtm niche add-product site.com "description"`
 
 ## Keywords
 Auto-derived from products covering: project management, bug reporting, dev tools, Notion/Jira alternatives, indie hacker tools, SaaS, startup tech stack, etc.

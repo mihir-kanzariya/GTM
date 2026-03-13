@@ -483,7 +483,7 @@ After posting: calendar.mark_posted(calendar_id, action_id)
 |------|----------|---------|
 | Chose keyword | keyword | "Used 'bug reporting tool' on reddit — score 8.2" |
 | Rolled action | engagement | "Skipped post — duplicate URL" |
-| Promoted | promotion | "Promoted blocfeed — ratio at 6%, relevant post" |
+| Promoted | promotion | "Promoted product — ratio at 6%, relevant post" |
 | Skipped promo | promotion | "Skipped promo — ratio at 9.8%" |
 | Replied to reply | reply | "User @devguy asked about pricing — replying" |
 | Skipped reply | reply | "User replied 'thanks' — rolled 30%, skipping" |

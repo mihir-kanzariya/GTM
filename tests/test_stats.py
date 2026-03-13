@@ -14,7 +14,7 @@ class TestWeeklyReport(unittest.TestCase):
         sid = create_session(self.db_path, "reddit")
         log_action(self.db_path, sid, "reddit", "like", "https://reddit.com/1")
         log_action(self.db_path, sid, "reddit", "comment", "https://reddit.com/2",
-                   content="great post", promoted_product="blocpad")
+                   content="great post", promoted_product="acme")
         log_action(self.db_path, sid, "reddit", "like", "https://reddit.com/3")
         end_session(self.db_path, sid)
 

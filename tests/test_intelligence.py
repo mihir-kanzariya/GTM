@@ -72,14 +72,14 @@ class TestNicheProfile(unittest.TestCase):
         self.assertEqual(niche["exclude"], ["politics", "crypto"])
 
     def test_add_product(self):
-        add_product(self.db_path, "blocfeed.com", "bug reporting tool")
+        add_product(self.db_path, "acme.com", "bug reporting tool")
         products = get_products(self.db_path)
         self.assertEqual(len(products), 1)
-        self.assertEqual(products[0]["url"], "blocfeed.com")
+        self.assertEqual(products[0]["url"], "acme.com")
 
     def test_add_multiple_products(self):
-        add_product(self.db_path, "blocfeed.com", "bug reporting")
-        add_product(self.db_path, "blocpad.com", "workspace")
+        add_product(self.db_path, "acme.com", "bug reporting")
+        add_product(self.db_path, "acme.com", "workspace")
         products = get_products(self.db_path)
         self.assertEqual(len(products), 2)
 

@@ -191,14 +191,14 @@ class TestNicheProfile(unittest.TestCase):
         self.assertEqual(niche["exclude"], ["politics", "crypto"])
 
     def test_add_product(self):
-        add_product(self.db_path, "blocfeed.com", "bug reporting tool")
+        add_product(self.db_path, "acme.com", "bug reporting tool")
         products = get_products(self.db_path)
         self.assertEqual(len(products), 1)
-        self.assertEqual(products[0]["url"], "blocfeed.com")
+        self.assertEqual(products[0]["url"], "acme.com")
 
     def test_add_multiple_products(self):
-        add_product(self.db_path, "blocfeed.com", "bug reporting")
-        add_product(self.db_path, "blocpad.com", "workspace")
+        add_product(self.db_path, "acme.com", "bug reporting")
+        add_product(self.db_path, "acme.com", "workspace")
         products = get_products(self.db_path)
         self.assertEqual(len(products), 2)
 
@@ -1178,8 +1178,8 @@ Add to the `commands` dict:
 python3 -m gtm niche set-industries ai saas developer-tools productivity
 python3 -m gtm niche set-audiences developers indie-hackers founders
 python3 -m gtm niche exclude politics crypto celebrity sports gaming
-python3 -m gtm niche add-product blocfeed.com "in-app bug reporting"
-python3 -m gtm niche add-product blocpad.com "unified workspace"
+python3 -m gtm niche add-product site.com "description"
+python3 -m gtm niche add-product site2.com "description"
 python3 -m gtm niche
 python3 -m gtm goal set balanced
 python3 -m gtm goal set twitter visibility

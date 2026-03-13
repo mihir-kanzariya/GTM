@@ -2,63 +2,29 @@
 
 ## Products
 
-### Blocpad
-- **URL**: https://blocpad.com
-- **What it is**: A unified real-time workspace that combines task management (Kanban boards, list views), Notion-style documentation/wiki, and team collaboration — all synced in real time.
-- **Key features**: Kanban boards, slash-command editor, nested wiki pages, real-time presence indicators, inline comments/mentions, autosave with version history, smart notifications, daily digests.
-- **Tech**: Next.js, TypeScript, Supabase Postgres with Row Level Security, Supabase Realtime.
-- **Target audience**: Software dev teams, startups, agencies, remote teams, founders tired of juggling Jira + Notion + Slack.
-- **Positioning**: "Jira, Notion, and Slack had a fast, opinionated child." Eliminates tool-switching friction.
-- **Competitors**: Notion, Jira, Linear, ClickUp, Asana, Monday.com
+Products are stored in the database and loaded automatically at session start via `load_briefing()`. No need to define them here.
 
-### Blocfeed
-- **URL**: https://blocfeed.com
-- **What it is**: A free, lightweight in-app bug reporting NPM package. Users click any element, submit annotated screenshots with full technical context. AI auto-triages, categorizes, and clusters reports.
-- **Key features**: Element-level selection (captures CSS selector, coordinates, URL), AI-powered triage (categorization, priority, sentiment, clustering), annotated screenshots, integrations (Slack, Linear, Jira, email), trend/spike detection.
-- **Tech**: ~8KB bundle, async loading, framework-agnostic (React, Next.js, Vue, Svelte, Angular).
-- **Target audience**: Vibe coders/AI developers (Cursor, Bolt, v0 users), product managers, developers needing precise bug reproduction.
-- **Positioning**: Free forever, setup in 2 minutes, reports in 10 seconds. Element-level precision vs competitors. Privacy-first (no tracking, no fingerprinting).
-- **Competitors**: Marker.io, BugHerd, Usersnap
+```bash
+# Add products (one-time setup)
+python3 -m gtm niche add-product yoursite.com "short description"
+
+# View configured products
+python3 -m gtm niche
+```
+
+When promoting, Claude pulls product details from the DB automatically. The `should_promote()` check and 1:10 ratio enforcement also read from the DB.
 
 ---
 
 ## Keywords
 
-### Blocpad-related
-- project management tool
-- team collaboration software
-- Notion alternative
-- Jira alternative
-- all-in-one workspace
-- real-time collaboration
-- kanban board tool
-- remote team tools
-- task management for startups
-- wiki documentation tool
-- project management for developers
+Keywords are used to find relevant posts on each platform. Add your product-specific keywords via the niche profile. General community keywords are used by default.
 
-### Blocfeed-related
-- bug reporting tool
-- in-app feedback widget
-- user feedback tool
-- bug tracking for developers
-- visual bug reporting
-- AI bug triage
-- free bug reporting tool
-- QA testing tools
-- user testing feedback
-- developer tools
-- vibe coding tools
-- ship fast bug reporting
-
-### General / Community
-- indie hacker tools
-- SaaS tools for startups
-- developer productivity
-- building in public
-- side project tools
-- startup tech stack
-- solopreneur tools
+```bash
+# Set your target industries (used for keyword generation)
+python3 -m gtm niche set-industries ai saas developer-tools
+python3 -m gtm niche set-audiences developers founders indie-hackers
+```
 
 ---
 
@@ -333,8 +299,8 @@ runner.record_action(
     platform, action_type, target_url,
     target_title="Post title",
     content="Your comment text",
-    promoted_product="blocfeed",       # if promoting
-    keywords_matched="bug reporting",  # keyword used to find post
+    promoted_product="product-url",    # from get_products(db_path), if promoting
+    keywords_matched="relevant keyword", # keyword used to find post
     comment_url="https://...",         # direct URL to your comment (for reply checking)
     author_username="devguy123",       # post author (for relationship tracking)
 )
@@ -422,8 +388,8 @@ gtm/
 python3 -m gtm niche set-industries ai saas developer-tools productivity
 python3 -m gtm niche set-audiences developers indie-hackers founders solopreneurs
 python3 -m gtm niche exclude politics crypto celebrity sports finance gaming
-python3 -m gtm niche add-product blocpad.com "unified workspace for dev teams"
-python3 -m gtm niche add-product blocfeed.com "in-app bug reporting with AI triage"
+python3 -m gtm niche add-product yoursite.com "your product description"
+# Products and keywords are loaded from DB automatically — no need to hardcode anywhere
 # Goal is auto-selected — no need to set manually (see Auto-Goal below)
 ```
 

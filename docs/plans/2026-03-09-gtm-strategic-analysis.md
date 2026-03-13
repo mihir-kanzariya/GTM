@@ -1,4 +1,4 @@
-# GTM Strategic Analysis — Blocpad & Blocfeed
+# GTM Strategic Analysis — Product Portfolio
 
 **Date:** 2026-03-09
 **Status:** Active
@@ -48,7 +48,7 @@
 
 ## 2. Market Analysis
 
-### Project Management Tools (Blocpad's market)
+### Project Management Tools
 
 - **Market size:** $9.76B (2025), growing to $23.09B by 2031 (15.42% CAGR)
 - **77% of orgs still don't use PM software.** They use spreadsheets and email. Massive untapped market.
@@ -61,7 +61,7 @@
 - Real-time collab that actually works.
 - Affordable AI features (Notion locked AI behind $18/user/month Business plans, angering smaller teams).
 
-### Bug Reporting Tools (Blocfeed's market)
+### Bug Reporting Tools
 
 - **Market size:** $366M (2025), growing to $862M by 2033 (11.3% CAGR)
 - **Vibe coding market:** $4.7B and exploding. Cursor/Bolt/v0 users ship fast but produce 1.7x more bugs.
@@ -77,17 +77,17 @@
 
 ## 3. Competitive Positioning
 
-### Blocpad vs Competitors
+### PM Tool vs Competitors
 
-| Competitor | Weakness Blocpad Exploits |
+| Competitor | Weakness to Exploit |
 |-----------|--------------------------|
-| **Jira** | Slow, complex, developers hate it. Blocpad = "what Jira should have been" |
-| **Notion** | Performance degrades at scale, AI locked behind expensive plans. Blocpad = fast + AI included |
-| **ClickUp** | Overwhelming UX, steep learning curve. Blocpad = opinionated simplicity |
-| **Linear** | Great for issues, but no docs/wiki. Teams still need Notion alongside it. Blocpad = Linear speed + docs in one place |
-| **Monday/Asana** | Non-technical focus. Developers feel patronized. Blocpad = built for dev teams |
+| **Jira** | Slow, complex, developers hate it. Our PM tool = "what Jira should have been" |
+| **Notion** | Performance degrades at scale, AI locked behind expensive plans. Our PM tool = fast + AI included |
+| **ClickUp** | Overwhelming UX, steep learning curve. Our PM tool = opinionated simplicity |
+| **Linear** | Great for issues, but no docs/wiki. Teams still need Notion alongside it. Our PM tool = Linear speed + docs in one place |
+| **Monday/Asana** | Non-technical focus. Developers feel patronized. Our PM tool = built for dev teams |
 
-**Blocpad positioning:**
+**PM tool positioning:**
 > One fast workspace for dev teams. Tasks, docs, and collaboration. No tab-switching, no bloat, no enterprise overhead.
 
 **Key differentiators to emphasize:**
@@ -96,15 +96,15 @@
 3. Opinionated for dev teams (not trying to be everything for everyone)
 4. Fast (Jira refugees care about this deeply)
 
-### Blocfeed vs Competitors
+### PM Tool vs Competitors
 
-| Competitor | Weakness Blocfeed Exploits |
+| Competitor | Weakness to Exploit |
 |-----------|---------------------------|
-| **Marker.io** | $39-149/month, only 3 seats on Starter. Blocfeed = free forever |
-| **BugHerd** | $33-50/month, limited integrations, web-only. Blocfeed = framework-agnostic, ~8KB |
-| **Usersnap** | Enterprise pricing (EUR 39-949+/month), overkill for small teams. Blocfeed = indie-friendly |
+| **Marker.io** | $39-149/month, only 3 seats on Starter. Our bug reporter = free forever |
+| **BugHerd** | $33-50/month, limited integrations, web-only. Our bug reporter = framework-agnostic, ~8KB |
+| **Usersnap** | Enterprise pricing (EUR 39-949+/month), overkill for small teams. Our bug reporter = indie-friendly |
 
-**Blocfeed positioning:**
+**Bug reporter positioning:**
 > Free bug reporting in 8KB. Your users click, annotate, submit. AI triages. No accounts, no tracking, no invoices.
 
 **Key differentiators to emphasize:**
@@ -129,7 +129,7 @@
 
 **Reddit**
 - Why: Long shelf life on comments, search engine indexed, trust-based community
-- Strategy: Target r/SaaS, r/webdev, r/SideProject, r/startups for Blocpad. Target r/webdev, r/reactjs, r/vibecoding for Blocfeed.
+- Strategy: Target r/SaaS, r/webdev, r/SideProject, r/startups for PM tool. Target r/webdev, r/reactjs, r/vibecoding for bug reporter.
 - Promotion angle: "I built something for this" in "what tool?" threads. Never lead with product.
 - Missing today: Zero promotions. Need to find relevant threads and naturally mention products.
 
@@ -138,7 +138,7 @@
 **Dev.to**
 - Why: Articles rank in Google, technical credibility, highest promotion acceptance
 - Strategy: 1 article per session. Types: "How I replaced Jira + Notion with one tool", "Why I built a free bug reporter", comparison posts, tutorials.
-- Promotion angle: Articles that teach while naturally mentioning Blocpad/Blocfeed. Include links in context.
+- Promotion angle: Articles that teach while naturally mentioning products from DB. Include links in context.
 - Missing today: Zero articles published. Huge missed opportunity.
 
 **Indie Hackers**
@@ -161,7 +161,7 @@
 
 ### High-Priority Keywords (search these on platforms)
 
-**Blocpad keywords (sorted by likely engagement):**
+**PM tool keywords (sorted by likely engagement):**
 1. "Jira alternative" / "Jira sucks" / "hate Jira" (Reddit, Twitter gold mine)
 2. "Notion alternative" / "Notion slow" / "Notion performance"
 3. "project management tool" / "what PM tool do you use"
@@ -170,7 +170,7 @@
 6. "kanban board" / "task management for startups"
 7. "Linear vs Notion" / "Linear alternative"
 
-**Blocfeed keywords:**
+**Bug reporter keywords:**
 1. "bug reporting tool" / "bug tracker free" (Reddit, Product Hunt)
 2. "user feedback widget" / "in-app feedback"
 3. "vibe coding tools" / "Cursor tools" / "Bolt.new tools"
@@ -199,7 +199,7 @@
 ### Twitter Threads (1 per day)
 
 **Building-in-public (50% of threads):**
-- What I shipped this week on Blocpad/Blocfeed
+- What I shipped this week on our products
 - A technical decision and why (e.g. "Why we chose Supabase over Firebase")
 - User feedback that changed our roadmap
 - Metrics updates (users, bug reports processed, etc.)
@@ -215,7 +215,7 @@
 ### Dev.to Articles (1 per session)
 
 **Article types by priority:**
-1. **Comparison posts:** "Notion vs Jira vs Blocpad for dev teams in 2026"
+1. **Comparison posts:** "Notion vs Jira vs [PM tool] for dev teams in 2026"
 2. **Tutorials:** "How to add bug reporting to your React app in 2 minutes"
 3. **Experience posts:** "Why I stopped using Jira and built my own PM tool"
 4. **Listicles:** "7 tools every indie hacker needs in 2026"
@@ -245,16 +245,16 @@
 
 ### Experiment 3: Dev.to Article Pipeline
 - **Hypothesis:** Technical articles with natural product mentions drive sustained traffic
-- **Action:** Publish 2-3 articles per week. Include Blocpad/Blocfeed mentions where natural.
+- **Action:** Publish 2-3 articles per week. Include product mentions where natural.
 - **Measure:** Article views, comments, reactions, and any referral traffic
 
 ### Experiment 4: "Jira Refugees" Campaign
 - **Hypothesis:** Anti-Jira sentiment is a reliable engagement magnet
-- **Action:** Specifically search for "Jira" complaints on Twitter and Reddit. Reply with empathy + subtle Blocpad mention.
+- **Action:** Specifically search for "Jira" complaints on Twitter and Reddit. Reply with empathy + subtle PM tool mention.
 - **Measure:** Reply engagement rate, profile clicks, any sign-ups
 
 ### Experiment 5: Vibe Coding Community Outreach
-- **Hypothesis:** Cursor/Bolt/v0 users are an underserved audience for Blocfeed
+- **Hypothesis:** Cursor/Bolt/v0 users are an underserved audience for our bug reporter
 - **Action:** Engage in r/vibecoding, vibe coding Twitter conversations, dev.to articles about AI coding tools
 - **Measure:** Engagement rate compared to general dev tool keywords
 
@@ -287,7 +287,7 @@
 
 8. Analyze keyword performance data and shift to top-performing keywords
 9. Identify and engage with high-value users (founders, tool reviewers, community leaders)
-10. Write a "Blocpad vs Notion vs Linear" comparison article for Dev.to
+10. Write a "[PM tool] vs Notion vs Linear" comparison article for Dev.to
 11. Write a "Free bug reporting tools in 2026" listicle for Dev.to
 12. Prepare Product Hunt launch strategy for both products
 
@@ -313,6 +313,6 @@
 
 **Month 1 (Now):** Establish consistent presence. Activate all v2 features. Start creating original content. Build initial keyword and relationship data.
 
-**Month 2:** Optimize based on data. Double down on top-performing keywords and platforms. Launch Blocfeed on Product Hunt. Publish 2-3 high-quality Dev.to articles that rank in search.
+**Month 2:** Optimize based on data. Double down on top-performing keywords and platforms. Launch bug reporter on Product Hunt. Publish 2-3 high-quality Dev.to articles that rank in search.
 
-**Month 3:** Scale what works. Identify referral loops. Consider paid amplification of top-performing organic content. Prepare Blocpad Product Hunt launch. Build partnerships with complementary tool makers.
+**Month 3:** Scale what works. Identify referral loops. Consider paid amplification of top-performing organic content. Prepare PM tool Product Hunt launch. Build partnerships with complementary tool makers.

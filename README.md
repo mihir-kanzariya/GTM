@@ -61,7 +61,7 @@ Before your first session, set up your niche profile:
 ```bash
 python3 -m gtm niche set-industries ai saas developer-tools
 python3 -m gtm niche set-audiences developers founders indie-hackers
-python3 -m gtm niche add-product yourproduct.com "short description of your product"
+python3 -m gtm niche add-product site.com "short description"
 ```
 
 ## Usage
@@ -172,12 +172,39 @@ Each platform has its own rules in `{platform}/CLAUDE.md`:
 - `indiehackers/CLAUDE.md`
 - `hackernews/CLAUDE.md`
 
+## Adding Your Products
+
+This repo ships with no products configured. You define them once via CLI and everything else picks them up automatically.
+
+### Step 1: Add your products
+```bash
+python3 -m gtm niche add-product myapp.com "project management tool for remote teams"
+python3 -m gtm niche add-product myblog.com "developer blog about building in public"
+```
+
+### Step 2: Set your niche (so Claude finds relevant posts)
+```bash
+python3 -m gtm niche set-industries ai saas developer-tools
+python3 -m gtm niche set-audiences developers founders indie-hackers
+python3 -m gtm niche exclude politics crypto celebrity sports
+```
+
+### Step 3: Verify your setup
+```bash
+python3 -m gtm niche
+```
+
+That's it. When you run a session, Claude automatically:
+- Loads your products from the DB via `load_briefing()`
+- Uses them for contextual promotion (max 1 promo per 10 engagements)
+- Checks promo ratio per platform before mentioning any product
+- Logs which product was promoted in each action for tracking
+
+No need to edit CLAUDE.md or any config files — everything reads from the database.
+
 ## Customization
 
-Edit `CLAUDE.md` to customize:
-- **Products** — replace Blocpad/Blocfeed with your own products
-- **Keywords** — add your target keywords
-- **Engagement rules** — adjust action weights, session limits, promotion ratio
+- **Engagement rules** — adjust action weights, session limits, promotion ratio in `CLAUDE.md`
 - **Writing style** — modify tone, platform-specific behavior
 - **Niche profile** — set industries, audiences, and exclusions via CLI
 

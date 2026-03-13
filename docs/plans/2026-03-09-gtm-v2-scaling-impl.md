@@ -246,7 +246,7 @@ class TestDecisions(unittest.TestCase):
         did = log_decision(
             self.db_path,
             category="promotion",
-            decision="Promoted blocfeed",
+            decision="Promoted acme-product",
             reasoning="Ratio at 6%, post about bug tracking",
             context='{"action_id": 42, "ratio": 0.06}',
             platform="reddit",
@@ -1502,14 +1502,14 @@ class TestThreads(unittest.TestCase):
 
     def test_log_thread(self):
         tweets = [
-            "This week I shipped auth for Blocpad. Here's how it went (thread)",
+            "This week I shipped auth for Acme. Here's how it went (thread)",
             "First, I tried Supabase Auth. Setup took 10 minutes. But the redirect flow broke on mobile.",
             "Switched to custom JWT + Supabase RLS. More work upfront but way more control.",
             "Lesson: don't pick the easy path if your users are mostly on mobile.",
         ]
         tid = log_thread(
             self.db_path, self.sid, "building_in_public",
-            "Shipping auth for Blocpad",
+            "Shipping auth for Acme",
             tweets, "https://x.com/mihir/status/123",
         )
         self.assertIsNotNone(tid)
